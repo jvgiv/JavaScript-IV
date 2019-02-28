@@ -18,11 +18,11 @@ class Instructor extends Person {
         this.specialty = instStats.specialty;
         this.catchPhrase = instStats.catchPhrase;
     }
-    demo() {
-        return `Today we are learning about memes`
+    demo(subject) {
+        return `Today we are learning about ${subject}`
     }
-    grade() {
-        return `${this.name} receives a perfect score on memes`
+    grade(student, subject) {
+        return `${student.name} receives a perfect score on ${subject}`
     }
 }
 
@@ -36,11 +36,11 @@ class Student extends Person {
     listsSubjects() {
         return `${this.favSubjects}`
     }
-    PRAssignment() {
-        return `${this.name} has submitted a PR for memes`
+    PRAssignment(subject) {
+        return `${this.name} has submitted a PR for ${subject}`
     }
-    sprintChallenge() {
-        return `${this.name} has begun sprint challenge on memes`
+    sprintChallenge(subject) {
+        return `${this.name} has begun sprint challenge on ${subject}`
     }
 }
 
@@ -50,11 +50,11 @@ class ProjectManager extends Instructor {
         this.gradClassName = proMan.gradClassName;
         this.favInstructor = proMan.favInstructor;
     }
-    standUp() {
-        return `${this.name} announces to general, @channel standy times!`
+    standUp(channel) {
+        return `${this.name} announces to ${channel}, @channel standy times!`
     }
-    debugsCode() {
-        return `${this.name} debugs {student.name} code on memes.`
+    debugsCode(student) {
+        return `${this.name} debugs ${student.name}'s code on memes.`
     }
 }
 
